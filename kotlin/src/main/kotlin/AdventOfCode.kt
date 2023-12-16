@@ -6,6 +6,7 @@ fun main(vararg args: String) {
         ?.also { if (it !in 1..25) throw IllegalArgumentException("day [$it] must be between 1 and 25") }
         ?: throw IllegalArgumentException("day [${args[0]}] must be a number")
     val dayRunner: Day<*, *> = when (day) {
+        1 -> Day01
         else -> TODO("${day}th day has not been implemented yet")
     }
     args.getOrNull(1)
